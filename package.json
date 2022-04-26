@@ -2,11 +2,14 @@
     "name": "telhai-hw-checker",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://natesol.github.io/telhai-hw-checker",
     "scripts": {
         "start": "vite",
         "dev": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@mantine/core": "^4.1.5",
@@ -28,6 +31,7 @@
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
         "@vitejs/plugin-react": "^1.3.0",
+        "gh-pages": "^3.2.3",
         "sass": "^1.51.0",
         "vite": "^2.9.5"
     }
