@@ -1,34 +1,41 @@
 /* ------------------------------------------------------------------------------------------------ */
-/* ---- Header Component -------------------------------------------------------------------------- */
+/* ---- React Component - Header Styles ----------------------------------------------------------------------------- */
 
 .Header {
-    position: fixed;
+    position: absolute;
     z-index: 5;
     top: 0;
     left: 0;
     height: $header-height;
+    background-color: $body-bg-color;
+    padding-block: $size-lg;
     width: 100%;
-    transition: transform 0.2s cubic-bezier(0.65, 0.05, 0.36, 1);
 
-    .navbar {
+    &-Container {
         height: 100%;
+        align-content: center;
     }
 
-    .logo {
-        font-size: 1.5rem;
+    .Logo {
+        height: calc(0.575 * $header-height);
     }
 
-    .dropdown-toggle {
-        padding: 0;
+    // .go-back-btn {
+    //     width: fit-content;
+    //     color: $color-primary-6;
+    //     font-weight: $fontWeight-bold;
+    //     font-size: $fontSize-lg;
+    //     padding: $size-sm;
 
-        &::after {
-            content: none;
-        }
-    }
+    //     &:hover {
+    //         color: $color-primary-9;
+    //     }
 
-    .dropdown-menu {
-        box-shadow: $elevated-1;
-    }
+    //     svg {
+    //         stroke-width: 3.5px;
+    //         margin-right: $size-2xs;
+    //     }
+    // }
 }
 
 /* ------------------------------------------------------------------------------------------------ */

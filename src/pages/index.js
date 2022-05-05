@@ -1,9 +1,12 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* ---- React Page Components - Barrel File ------------------------------------------------------- */
 
-export * from './HomeworkUpload';
-export * from './HomeworkCheck';
-export * from './ViewResults';
+export * from './Home';
+
+export * from './CheckHomework';
+export * from './CheckHomework/RunTests';
+export * from './CheckHomework/TestsResults';
+export * from './CheckHomework/ViewOutput';
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

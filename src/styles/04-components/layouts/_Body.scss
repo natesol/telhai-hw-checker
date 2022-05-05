@@ -1,14 +1,12 @@
 /* ------------------------------------------------------------------------------------------------ */
-/* ---- Global Constants -------------------------------------------------------------------------- */
+/* ---- React Component - Body Styles ------------------------------------------------------------- */
 
-const KEYS_PREFIX = 'telhai-';
-
-export const USER_PREFERENCES_KEY = KEYS_PREFIX + 'user-preferences';
-
-export const USER_PREFERENCES_DEFAULT = {
-    theme: 'light',
-    // language: 'en',
-};
+.Body {
+    position: relative;
+    padding-top: calc(2rem + $header-height);
+    padding-bottom: 9rem;
+    width: 100vw;
+}
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

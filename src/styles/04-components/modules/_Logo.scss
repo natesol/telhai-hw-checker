@@ -2,8 +2,12 @@
 /* ---- Modules Elements Styles ------------------------------------------------------------------- */
 
 .Logo {
-    &.black {
-        filter: invert(1);
+    max-height: 100%;
+    width: auto;
+    color: $color-primary-6;
+
+    &:hover {
+        color: $color-primary-8;
     }
 }
 

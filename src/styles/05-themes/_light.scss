@@ -1,50 +1,48 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* ---- Light Theme Styles ------------------------------------------------------------------------ */
 
-
 // default theme
 :root,
-:root[data-theme="light"] {
-
+:root[data-theme='light'] {
     /* ---------------------------------------------------- */
     /* Color-Scheme Base Property ------------------------- */
-    
+
     color-scheme: light;
-    
+
+    --primary: var(--primary-5);
+    --primary-0: var(--green-0);
+    --primary-1: var(--green-1);
+    --primary-2: var(--green-2);
+    --primary-3: var(--green-3);
+    --primary-4: var(--green-4);
+    --primary-5: var(--green-5);
+    --primary-6: var(--green-6);
+    --primary-7: var(--green-7);
+    --primary-8: var(--green-8);
+    --primary-9: var(--green-9);
+
+    --accent: var(--accent-5);
+    --accent-0: var(--ocean-0);
+    --accent-1: var(--ocean-1);
+    --accent-2: var(--ocean-2);
+    --accent-3: var(--ocean-3);
+    --accent-4: var(--ocean-4);
+    --accent-5: var(--ocean-5);
+    --accent-6: var(--ocean-6);
+    --accent-7: var(--ocean-7);
+    --accent-8: var(--ocean-8);
+    --accent-9: var(--ocean-9);
 
     /* ---------------------------------------------------- */
     /* Colors In Use -------------------------------------- */
-    
-    // --clr-prm-h: 191; --clr-prm-s:  89%; --clr-prm-l: 52%; // primary
-    // --clr-sec-h: 222; --clr-sec-s: 100%; --clr-sec-l: 50%; // secondary
-    // --clr-acc-h: 155; --clr-acc-s:  91%; --clr-acc-l: 39%; // accent
-    
-    // --clr-info-bg:     209 100% 94%;
-    // --clr-info-txt:    209 100% 31%;
-    // --clr-error-bg:    338 100% 95%;
-    // --clr-error-txt:   338 100% 31%;
-    // --clr-success-bg:  157 100% 97%;
-    // --clr-success-txt: 155 100% 26%;
 
-    // --shadow-c: hsl(#{$colorValues-gray-9} / 19%);
+    --body-bg: var(--white);
 
-    // --title-c: #{$color-gray-10};
-    // --title-h: #{$color-primary-dark};
+    /* ---------------------------------------------------- */
+    /* Specific Adjustments ------------------------------- */
 
-    // --body-bg-c:  #{$color-gray-1};
-    // --body-bg-h:  #{$color-gray-2};
-    // --body-txt-c: #{$color-gray-7};
-    // --body-txt-h: #{$color-primary};
-
-    // --sheet-bg-c:  #{$color-gray-2};
-    // --sheet-bg-h:  #{$color-gray-2};
-    // --sheet-txt-c: #{$color-gray-7};
-    // --sheet-txt-h: #{$color-gray-7};
-
-    // --tip-bg-c:  #{$color-gray-10};
-    // --tip-txt-c: #{$color-gray-2};
+    // ...
 }
-
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

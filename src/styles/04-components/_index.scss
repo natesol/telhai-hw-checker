@@ -1,12 +1,19 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* ---- Components Rules - Barrel File ------------------------------------------------------------ */
 
+@import './layouts/PageTemplate';
+@import './layouts/Body';
 @import './layouts/Section';
 @import './layouts/Header';
 
-@import './modules/Loader';
+@import './modules/ThemeSwitch';
 @import './modules/Logo';
-@import './modules/CardSlider';
+
+// ~
+@import './modules/FileUploader';
+
+// !
+@import './modules/Loader';
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

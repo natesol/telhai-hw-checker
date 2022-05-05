@@ -1,70 +1,40 @@
 /* ------------------------------------------------------------------------------------------------ */
 /* ---- React Component - App Header -------------------------------------------------------------- */
 
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import FilesContext from '../../context/FilesContext';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-import { useToggle } from '@mantine/hooks';
-import {
-    useMantineColorScheme,
-    useMantineTheme,
-    Anchor,
-    Container,
-    Group,
-    Text,
-    Modal,
-    Button,
-    Switch,
-} from '@mantine/core';
+import { ActionIcon, Container, Group } from '@mantine/core';
 
-import { Logo, ThemeSwitch } from '../../components';
+import { ArrowLeft } from 'tabler-icons-react';
 
-export const Header = ({ size = 'xs' }) => {
-    const theme = useMantineTheme();
-    const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+import { Tooltip, Logo, ThemeSwitch } from '../../components';
 
-    const [showModal, setShowModal] = useToggle(false, [false, true]);
+export const Header = ({ size = 'md' }) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { setFiles } = useContext(FilesContext);
+
+    const goBack = () => {
+        setFiles([]);
+        navigate('/');
+    };
 
     return (
         <>
-            <header
-                className={`Header`}
-                style={{
-                    backgroundColor: theme.colors[theme.primaryColor][6],
-                }}
-            >
-                <Container size={size} sx={{ height: '100%' }}>
-                    <Group position='apart' sx={{ height: '100%', alignContent: 'center' }}>
+            <header className={`Header`}>
+                <Container component={Group} className={`Header-Container`} position='apart' size={size}>
+                    {location.pathname === '/check-homework' ? (
+                        // <Tooltip tip='Go back to the home Page' position='auto'>
+                        <Logo to='/' onClick={goBack} />
+                    ) : (
+                        // </Tooltip>
                         <Logo to='/' />
-                        <Group>
-                            <Anchor component={Link} size='xs' variant='dimmed' to='/'>
-                                upload
-                            </Anchor>
-                            <Anchor component={Link} size='xs' variant='dimmed' to='/check'>
-                                check
-                            </Anchor>
-                            <Anchor component={Link} size='xs' variant='dimmed' to='/results'>
-                                results
-                            </Anchor>
-                        </Group>
-                        <ThemeSwitch />
-                    </Group>
+                    )}
+                    <ThemeSwitch />
                 </Container>
             </header>
-
-            <Modal
-                opened={showModal}
-                onClose={() => setShowModal(false)}
-                title={<>Log Out?</>}
-                overflow='inside'
-                centered
-                size='xl'
-            >
-                <Text>Are you sure you want to log out of your account?</Text>
-                <Group>
-                    <Button onClick={() => setShowModal(false)}>Cancel</Button>
-                    <Button onClick={() => {}}>Logout</Button>
-                </Group>
-            </Modal>
         </>
     );
 };

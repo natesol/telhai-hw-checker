@@ -1,8 +1,11 @@
 /* ------------------------------------------------------------------------------------------------ */
-/* ---- Utility Functions & Logic - Barrel File --------------------------------------------------- */
+/* ---- Global Utilities - Constants, Functions & Logic - Barrel File ----------------------------- */
 
-export * from './mantine-custom-theme';
-export * from './globals';
+export * from './mantineCustomTheme';
+
+export * from './reactDiffViewerCustomTheme';
+
+export * from './functions';
 
 /* ------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------ */

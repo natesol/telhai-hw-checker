@@ -4,7 +4,7 @@
     "version": "0.0.0",
     "homepage": "https://natesol.github.io/telhai-hw-checker",
     "scripts": {
-        "start": "vite",
+        "start": "npm run dev",
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
@@ -19,10 +19,13 @@
         "@mantine/modals": "^4.1.5",
         "@mantine/notifications": "^4.1.5",
         "@mantine/prism": "^4.1.5",
+        "@monaco-editor/react": "^4.4.4",
         "axios": "^0.27.1",
         "dayjs": "^1.11.1",
         "react": "^18.0.0",
+        "react-diff-viewer": "^3.1.1",
         "react-dom": "^18.0.0",
+        "react-file-icon": "^1.1.0",
         "react-router-dom": "^6.3.0",
         "tabler-icons-react": "^1.46.0"
     },

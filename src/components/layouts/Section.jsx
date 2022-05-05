@@ -1,13 +1,13 @@
 /* ------------------------------------------------------------------------------------------------ */
-/* ---- React Component - Section (Basic Layout Module) ------------------------------------------- */
+/* ---- React Component - Section ----------------------------------------------------------------- */
 
-export function Section({ children, className = '', style }) {
+export const Section = ({ children, className, style }) => {
     return (
-        <section className={`section` + (className ? ` ${className}` : '')} style={style}>
+        <section className={`Section${className ? ` ${className}` : ''}`} style={style}>
             {children}
         </section>
     );
-}
+};
 
 export default Section;
 

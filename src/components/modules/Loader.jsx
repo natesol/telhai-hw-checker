@@ -1,6 +1,6 @@
-import { LoadingOverlay, Loader as Spinner } from '@mantine/core';
+import { LoadingOverlay, Loader as MantineLoader } from '@mantine/core';
 
-export function Loader({ fullPage = false, visible, ...props }) {
+export const Loader = ({ fullPage = false, visible, ...props }) => {
     return (
         <>
             {fullPage ? (
@@ -9,15 +9,16 @@ export function Loader({ fullPage = false, visible, ...props }) {
                         transitionDuration={120}
                         visible={visible}
                         loaderProps={{ height: '6rem', width: '6rem' }}
+                        variant='dots'
                     />
                 </div>
             ) : (
                 <div className='loader' {...props}>
-                    <Spinner transitionDuration={100} visible={visible} height='6rem' width='6rem' />
+                    <MantineLoader visible={visible} height='6rem' width='6rem' variant='dots' />
                 </div>
             )}
         </>
     );
-}
+};
 
-export default Spinner;
+export default MantineLoader;
